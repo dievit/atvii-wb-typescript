@@ -12,8 +12,9 @@ export default class ListaCliente extends Component<props> {
         let estilo = `collection-item active ${this.props.tema}`
         return (
             <div className="collection">
+                <a className="collection-header"><h4>Lista de Clientes</h4></a>
                 <a className="collection-item">Cliente 1</a>
-                <a className={estilo}>Cliente 2</a>
+                <a className="collection-item">Cliente 2</a>
                 <a className="collection-item">Cliente 3</a>
                 <a className="collection-item">Cliente 4</a>
             </div>
