@@ -23,6 +23,16 @@ export default class FormularioCadastroCliente extends Component<props> {
                     </div>
                     <div className="row">
                         <div className="input-field col s6">
+                            <input id="nomeSocial" type="text" className="validate" />
+                            <label htmlFor="nomeSocial">nome social</label>
+                        </div>
+                        <div className="input-field col s6">
+                            <input id="cpf" type="text" className="validate" />
+                            <label htmlFor="cpf">cpf</label>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="input-field col s6">
                             <input id="telefone" type="text" className="validate" />
                             <label htmlFor="telefone">telefone</label>
                         </div>
@@ -34,7 +44,7 @@ export default class FormularioCadastroCliente extends Component<props> {
                     <div className="row">
                         <div className="col s12">
                             <button className={estiloBotao} type="submit" name="action">Submit
-                                <i className="material-icons right">send</i>
+                                <i className="material-icons right">person_add</i>
                             </button>
                         </div>
                     </div>

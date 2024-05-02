@@ -10,46 +10,41 @@ type props = {
 }
 
 export default class BarraNavegacao extends Component<props> {
-    constructor(props: props | Readonly<props>) {
-        super(props)
-        this.gerarListaBotoes = this.gerarListaBotoes.bind(this)
-    }
-
     componentDidMount() {
-        document.addEventListener('DOMContentLoaded', function () {
-            let elems = document.querySelectorAll('.sidenav');
-            M.Sidenav.init(elems)
-        });
+        // Inicialize o dropdown
+        const elems = document.querySelectorAll('.dropdown-trigger');
+        M.Dropdown.init(elems);
     }
 
     gerarListaBotoes() {
         if (this.props.botoes.length <= 0) {
-            return <></>
+            return <></>;
         } else {
-            let lista = this.props.botoes.map(valor =>
+            return this.props.botoes.map(valor =>
                 <li key={valor}><a onClick={(e) => this.props.seletorView(valor, e)}>{valor}</a></li>
-            )
-            return lista
+            );
         }
     }
 
     render() {
-        let estilo = `${this.props.tema}`
+        let estilo = `${this.props.tema}`;
         return (
             <>
                 <nav className={estilo}>
                     <div className="nav-wrapper">
-                        <a className="brand-logo">WorldBeauty</a>
-                        <a data-target="mobile-menu" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+                        <a href="#!" className="brand-logo">WorldBeauty</a>
                         <ul className="right hide-on-med-and-down">
-                            {this.gerarListaBotoes()}
+                            {/* Dropdown Trigger */}
+                            <li><a className="dropdown-trigger" href="#!" data-target="dropdown1">Menu<i className="material-icons right">arrow_drop_down</i></a></li>
                         </ul>
                     </div>
                 </nav>
-                <ul className="sidenav" id="mobile-menu">
+
+                {/* Dropdown Content */}
+                <ul id="dropdown1" className="dropdown-content">
                     {this.gerarListaBotoes()}
                 </ul>
             </>
-        )
+        );
     }
 }
