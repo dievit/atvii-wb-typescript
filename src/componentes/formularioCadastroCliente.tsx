@@ -1,11 +1,18 @@
 import { Component } from "react";
+import 'materialize-css/dist/css/materialize.min.css';
+import M from 'materialize-css';
 
 type props = {
     tema: string
 }
 
 export default class FormularioCadastroCliente extends Component<props> {
-    
+    componentDidMount() {
+        setTimeout(() => {
+            const elems = document.querySelectorAll('select');
+            M.FormSelect.init(elems);
+        }, 0);
+    }
     render() {
         let estiloBotao = `btn waves-effect waves-light ${this.props.tema}`
         return (
@@ -42,8 +49,18 @@ export default class FormularioCadastroCliente extends Component<props> {
                         </div>
                     </div>
                     <div className="row">
+                        <div className="input-field col s2">
+                            <select id="sexo">
+                                <option value="" disabled selected>Escolha uma opção</option>
+                                <option value="1">Feminino</option>
+                                <option value="2">Masculino</option>
+                            </select>
+                            <label htmlFor="sexo">Sexo</label>
+                        </div>
+                    </div>
+                    <div className="row">
                         <div className="col s12">
-                            <button className={estiloBotao} type="submit" name="action">Submit
+                            <button className={estiloBotao} type="submit" name="action">Cadastrar
                                 <i className="material-icons right">person_add</i>
                             </button>
                         </div>

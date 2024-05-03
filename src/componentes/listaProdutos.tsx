@@ -23,7 +23,93 @@ export default class ListaProdutos extends Component<props> {
                         <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
                     </li>
                 </ul>
+                <ul className="collapsible">
+                    <li>
+                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i>Produto 1</div>
+                        <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                </ul>
+                <ul className="collapsible">
+                    <li>
+                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i>Produto 1</div>
+                        <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                </ul>
+                <ul className="collapsible">
+                    <li>
+                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i>Produto 1</div>
+                        <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                </ul>
+                <ul className="collapsible">
+                    <li>
+                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i>Produto 1</div>
+                        <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                </ul>
+                <ul className="collapsible">
+                    <li>
+                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i>Produto 1</div>
+                        <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                </ul>
+                <ul className="collapsible">
+                    <li>
+                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i>Produto 1</div>
+                        <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                </ul>
+                <ul className="collapsible">
+                    <li>
+                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i>Produto 1</div>
+                        <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                </ul>
+                <ul className="collapsible">
+                    <li>
+                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i>Produto 1</div>
+                        <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                </ul>
+                <ul className="collapsible">
+                    <li>
+                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i>Produto 1</div>
+                        <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                </ul>
+                <ul className="collapsible">
+                    <li>
+                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i>Produto 1</div>
+                        <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                </ul>
+                <ul className="collapsible">
+                    <li>
+                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i>Produto 1</div>
+                        <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                </ul>
+                <ul className="collapsible">
+                    <li>
+                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i>Produto 1</div>
+                        <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                </ul>
+                <ul className="collapsible">
+                    <li>
+                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i>Produto 1</div>
+                        <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                </ul>
+                <ul className="collapsible">
+                    <li>
+                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i>Produto 1</div>
+                        <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                </ul>
             </div>
+
+            
         )
     }
 }
