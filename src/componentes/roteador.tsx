@@ -14,7 +14,6 @@ export default class Roteador extends Component<{}, state> {
     constructor(props: {} | Readonly<{}>) {
         super(props)
         const telaSalva = localStorage.getItem("telaAtual");
-
         this.state = {
             tela: telaSalva || "Home"
         };
@@ -66,10 +65,7 @@ export default class Roteador extends Component<{}, state> {
                     {barraNavegacao}
                     <TerminalDeVendas tema ="cyan darken-1" />
                 </>
-
             )
-
         }
-
     }
 }

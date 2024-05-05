@@ -12,9 +12,14 @@ type props = {
 
 export default class BarraNavegacao extends Component<props> {
     componentDidMount() {
+        setTimeout(() => {
+        const elemsDropdown = document.querySelectorAll('.dropdown-trigger');
+        M.Dropdown.init(elemsDropdown);
+        
+        const elemsSidenav = document.querySelectorAll('.sidenav');
         // Inicialize o dropdown
-        const elems = document.querySelectorAll('.dropdown-trigger');
-        M.Dropdown.init(elems);
+        M.Dropdown.init(elemsSidenav)
+        }, 0);
     }
 
     gerarListaBotoes() {
@@ -34,6 +39,7 @@ export default class BarraNavegacao extends Component<props> {
                 <nav className={estilo}>
                     <div className="nav-wrapper">
                         <a href="#!" className="brand-logo">WorldBeauty</a>
+                        <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                         <ul className="right hide-on-med-and-down">
                             {/* Dropdown Trigger */}
                             <li><a className="dropdown-trigger" href="#!" data-target="dropdown1">Menu<i className="material-icons right">arrow_drop_down</i></a></li>
@@ -42,6 +48,18 @@ export default class BarraNavegacao extends Component<props> {
                 </nav>
 
                 {/* Dropdown Content */}
+                <ul id="dropdown1" className="dropdown-content">
+                    {this.gerarListaBotoes()}
+                </ul>
+
+                {/* Sidenav Content */}
+                <ul className="sidenav" id="mobile-demo">
+                    <li>
+                        <a className="dropdown-trigger" href="#!" data-target="dropdown1">Menu<i className="material-icons right">arrow_drop_down</i></a>
+                    </li>
+                </ul>
+
+                {/* Dropdwon Content for Sidenav */}
                 <ul id="dropdown1" className="dropdown-content">
                     {this.gerarListaBotoes()}
                 </ul>

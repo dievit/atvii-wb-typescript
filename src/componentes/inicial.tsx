@@ -1,5 +1,4 @@
 import { Component } from "react";
-import ThreeScene from "./threeScene";
 
 type props = {
     tema: string
@@ -10,7 +9,6 @@ const App = () => {
         <>
             <div>
                 <h1>Minha Página 3D</h1>
-                <ThreeScene />
             </div>
         </>
     );

@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css';
 
-
 type props = {
     tema: string
 }
@@ -15,7 +14,6 @@ export default class ListaCliente extends Component<props> {
             M.Collapsible.init(elems);
         }, 0);
     }
-
 
     render() {
         return (
@@ -40,25 +38,32 @@ export default class ListaCliente extends Component<props> {
                     <li>
                         <div className="collapsible-header"><i className="material-icons">person</i>Cliente 5</div>
                         <div className="collapsible-body"><span>infos do cliente dois</span></div>
-                    </li>                    <li>
+                    </li>                    
+                    <li>
                         <div className="collapsible-header"><i className="material-icons">person</i>Cliente 6</div>
                         <div className="collapsible-body"><span>infos do cliente dois</span></div>
-                    </li>                    <li>
+                    </li>                    
+                    <li>
                         <div className="collapsible-header"><i className="material-icons">person</i>Cliente 7</div>
                         <div className="collapsible-body"><span>infos do cliente dois</span></div>
-                    </li>                    <li>
+                    </li>                    
+                    <li>
                         <div className="collapsible-header"><i className="material-icons">person</i>Cliente 8</div>
                         <div className="collapsible-body"><span>infos do cliente dois</span></div>
-                    </li>                    <li>
+                    </li>                    
+                    <li>
                         <div className="collapsible-header"><i className="material-icons">person</i>Cliente 9</div>
                         <div className="collapsible-body"><span>infos do cliente dois</span></div>
-                    </li>                    <li>
+                    </li>                    
+                    <li>
                         <div className="collapsible-header"><i className="material-icons">person</i>Cliente 10</div>
                         <div className="collapsible-body"><span>infos do cliente dois</span></div>
-                    </li>                    <li>
+                    </li>                    
+                    <li>
                         <div className="collapsible-header"><i className="material-icons">person</i>Cliente 11</div>
                         <div className="collapsible-body"><span>infos do cliente dois</span></div>
-                    </li>                    <li>
+                    </li>                    
+                    <li>
                         <div className="collapsible-header"><i className="material-icons">person</i>Cliente 12</div>
                         <div className="collapsible-body"><span>infos do cliente dois</span></div>
                     </li>
