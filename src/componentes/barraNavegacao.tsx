@@ -36,33 +36,26 @@ export default class BarraNavegacao extends Component<props> {
         let estilo = `${this.props.tema}`;
         return (
             <>
+            <div className="navbar-fixed">
                 <nav className={estilo}>
                     <div className="nav-wrapper">
                         <a href="#!" className="brand-logo">WorldBeauty</a>
                         <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                         <ul className="right hide-on-med-and-down">
                             {/* Dropdown Trigger */}
-                            <li><a className="dropdown-trigger" href="#!" data-target="dropdown1">Menu<i className="material-icons right">arrow_drop_down</i></a></li>
+                            <li><a className="dropdown-trigger" href="#!" data-target="dropdown1"><strong>Produto</strong><i className="material-icons right">arrow_drop_down</i></a></li>
+                            <li><a className="dropdown-trigger" href="#!" data-target="dropdonw2"><strong>Cliente</strong><i className="material-icons right">arrow_drop_down</i></a></li>
+                            <li><a className="dropdown-trigger" href="#!" data-target="dropdonw2"><strong>Terminal</strong></a></li>
                         </ul>
                     </div>
                 </nav>
+            </div>
 
                 {/* Dropdown Content */}
                 <ul id="dropdown1" className="dropdown-content">
                     {this.gerarListaBotoes()}
                 </ul>
 
-                {/* Sidenav Content */}
-                <ul className="sidenav" id="mobile-demo">
-                    <li>
-                        <a className="dropdown-trigger" href="#!" data-target="dropdown1">Menu<i className="material-icons right">arrow_drop_down</i></a>
-                    </li>
-                </ul>
-
-                {/* Dropdwon Content for Sidenav */}
-                <ul id="dropdown1" className="dropdown-content">
-                    {this.gerarListaBotoes()}
-                </ul>
             </>
         );
     }

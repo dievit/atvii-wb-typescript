@@ -3,7 +3,7 @@ import BarraNavegacao from "./barraNavegacao";
 import FormularioCadastroCliente from "./formularioCadastroCliente";
 import ListaCliente from "./listaCliente";
 import ListaProdutos from "./listaProdutos";
-import TerminalDeVendas from "./vendas";
+import TerminalDeVendas from "./formularioVenda";
 import PaginaInicial from "./inicial";
 
 type state = {
