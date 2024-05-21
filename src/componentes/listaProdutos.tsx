@@ -5,6 +5,8 @@ import M from 'materialize-css';
 
 type props = {
     tema: string
+    seletorView: (tela:string, evento?: React.MouseEvent) => void
+
 }
 
 export default class ListaProdutos extends Component<props> {
@@ -127,6 +129,12 @@ export default class ListaProdutos extends Component<props> {
                         </div>
                     </li>
                 </ul>
+                <div>
+                <button className="btn-floating btn-large waves-effect waves-light cyan darken-1" onClick={(e) => this.props.seletorView('Cadastrar Produto', e)}>
+                    <i className="material-icons right mt-8">person_add</i>
+                </button>
+                </div>
+
             </div>
         </>
         );

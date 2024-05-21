@@ -1,6 +1,5 @@
-/* CSS Personalizado */
 .dropdown-content {
-    min-width: 150px; /* Defina a largura desejada */
+    min-width: 150px; 
     top: -68px;
 }
 

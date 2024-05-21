@@ -8,7 +8,7 @@ type props = {
 
 }
 
-export default class FormularioCadastroCliente extends Component<props> {
+export default class FormularioCadastroProduto extends Component<props> {
     componentDidMount() {
         setTimeout(() => {
             const elems = document.querySelectorAll('select');
@@ -27,48 +27,31 @@ export default class FormularioCadastroCliente extends Component<props> {
                         </div>
                         <div className="input-field col s6">
                             <input id="last_name" type="text" className="validate" />
-                            <label htmlFor="last_name">Sobrenome</label>
+                            <label htmlFor="last_name">Categoria</label>
                         </div>
                     </div>
                     <div className="row">
                         <div className="input-field col s6">
                             <input id="nomeSocial" type="text" className="validate" />
-                            <label htmlFor="nomeSocial">Nome social</label>
+                            <label htmlFor="nomeSocial">Preço</label>
                         </div>
                         <div className="input-field col s6">
                             <input id="cpf" type="text" className="validate" />
-                            <label htmlFor="cpf">CPF</label>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="input-field col s6">
-                            <input id="telefone" type="text" className="validate" />
-                            <label htmlFor="telefone">Telefone</label>
-                        </div>
-                        <div className="input-field col s6">
-                            <input id="email" type="email" className="validate" />
-                            <label htmlFor="email">e-mail</label>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="input-field col s2">
-                            <select id="sexo">
-                                <option value="" disabled selected>Escolha uma opção</option>
-                                <option value="1">Feminino</option>
-                                <option value="2">Masculino</option>
-                            </select>
-                            <label htmlFor="sexo">Sexo</label>
+                            <label htmlFor="cpf">Custo</label>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col s12">
-                            <button className="btn waves-effect waves-light cyan darken-1" type="submit" name="action">Cadastrar
+                            <button className={estiloBotao} type="submit" name="action">Cadastrar
                                 <i className="material-icons right">person_add</i>
-                            </button>
-                            <button className="btn waves-effect waves-light cyan darken-1" type="button" onClick={(e) => this.props.seletorView('Clientes', e)}>Voltar
+                            </button>                            
+                        </div>
+                        <div className="col s12">
+                            <button className={estiloBotao} type="button" onClick={(e) => this.props.seletorView('Produtos', e)}>Voltar
                                 <i className="material-icons right">person_add</i>
                             </button>
                         </div>
+
                     </div>
                 </form>
             </div>

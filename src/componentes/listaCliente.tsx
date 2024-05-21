@@ -6,6 +6,7 @@ import '../styles/custom-style.css'
 
 type props = {
     tema: string
+    seletorView: (tela:string, evento?: React.MouseEvent) => void
 }
 
 export default class ListaCliente extends Component<props> {
@@ -13,12 +14,12 @@ export default class ListaCliente extends Component<props> {
         setTimeout(() => {
             const elems = document.querySelectorAll('.collapsible');
             M.Collapsible.init(elems);
-        }, 0);
-    }
+        }, 0);    
+    }    
 
     render() {
         let estiloBotao = `btn waves-effect waves-light ${this.props.tema}`
-
+        let estiloBotao2 = `  ${this.props.tema}`
         return (
             <div>
                 <ul className='collapsible'>
@@ -133,6 +134,11 @@ export default class ListaCliente extends Component<props> {
                         </div>
                     </li>                    
                 </ul>
+                <div>
+                <button className="btn-floating btn-large waves-effect waves-light cyan darken-1" onClick={(e) => this.props.seletorView('Cadastrar Cliente', e)}>
+                    <i className="material-icons right mt-8">person_add</i>
+                </button>
+                </div>
             </div>
         )
     }
