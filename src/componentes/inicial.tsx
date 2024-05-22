@@ -1,11 +1,11 @@
-import { Component } from "react";
-import backgroundImage from "../images/wb_background.png"
+import React from 'react';
+import backgroundImage from "../images/wb_background.png";
 
-type props = {
-    tema: string
+type Props = {
+    tema: string;
 }
 
-const App = () => {
+const App: React.FC = () => {
     return (
         <>
             <div>
@@ -15,15 +15,14 @@ const App = () => {
     );
 }
 
-export default class PaginaInicial extends Component<props> {
-
-    render() {
-        return (
-            <div className="centered" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
-                <header>
-                    <App />
-                </header>
-            </div>
-        )
-    }
+const PaginaInicial: React.FC<Props> = () => {
+    return (
+        <div className="centered" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+            <header>
+                <App />
+            </header>
+        </div>
+    );
 }
+
+export default PaginaInicial;

@@ -1,144 +1,69 @@
-import { Component } from "react";
-import 'materialize-css/dist/css/materialize.min.css'
+import React, { useEffect } from 'react';
+import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css';
 
-type props = {
-    tema: string
-    seletorView: (tela:string, evento?: React.MouseEvent) => void
-
+type Props = {
+    tema: string;
+    seletorView: (tela: string, evento?: React.MouseEvent) => void;
 }
 
-export default class ListaProdutos extends Component<props> {
-    componentDidMount() {
+const ListaProdutos: React.FC<Props> = ({ tema, seletorView }) => {
+    useEffect(() => {
         setTimeout(() => {
             const elems = document.querySelectorAll('.collapsible');
             M.Collapsible.init(elems);
         }, 0);
-    }
-    render() {
+    }, []);
 
-        let estiloBotao = `btn waves-effect waves-light ${this.props.tema}`
+    const estiloBotao = `btn waves-effect waves-light ${tema}`;
+    const produtos = [
+        { id: 1, nome: "Produto1", categoria: "Teste", preco: "150,00", custo: "70,00" },
+        { id: 2, nome: "Produto2", categoria: "Teste", preco: "80,00", custo: "30,00" },
+        { id: 3, nome: "Produto3", categoria: "Teste", preco: "50,00", custo: "20,00" },
+        { id: 4, nome: "Produto4", categoria: "Teste", preco: "30,00", custo: "10,00" },
+        { id: 5, nome: "Produto5", categoria: "Teste", preco: "20,00", custo: "5,00" }
+    ];
 
-        return (
-        <>    
+    return (
+        <>
             <div>
                 <div className="center">
                     <h3>Produtos</h3>
                 </div>
                 <ul className="collapsible">
-                    <li>
-                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i><strong>Produto 1</strong></div>
-                        <div className="collapsible-body">
-                            <div className="row">
-                                <div className="col s6">
-                                    <span>
-                                        <strong>ID: </strong>1 <br />
-                                        <strong>Nome: </strong>Produto1 <br />
-                                        <strong>Categoria: </strong>Teste <br />
-                                        <strong>Preço: R$</strong>150,00 <br />
-                                        <strong>Custo: R$</strong>70,00 <br />
-                                    </span>
-                                </div>
-                                <div className="col s6">
-                                    <button className={estiloBotao} onClick={() => console.log(`Botão dentro do collapsible`)}>Editar
-                                        <i className="material-icons right">create</i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i><strong>Produto 2</strong></div>
-                        <div className="collapsible-body">
-                            <div className="row">
-                                <div className="col s6">
-                                    <span>
-                                        <strong>ID: </strong>2 <br />
-                                        <strong>Nome: </strong>Produto2 <br />
-                                        <strong>Categoria: </strong>Teste <br />
-                                        <strong>Preço: R$</strong>80,00 <br />
-                                        <strong>Custo: R$</strong>30,00 <br />
-                                    </span>
-                                </div>                                    <div className="col s6">
-                                      <button className={estiloBotao}onClick={() => console.log(`Botão dentro do collapsible`)}>Editar
-                                        <i className="material-icons right">create</i>
-                                    </button>
+                    {produtos.map(produto => (
+                        <li key={produto.id}>
+                            <div className="collapsible-header"><i className="material-icons">crop_7_5</i><strong>Produto {produto.id}</strong></div>
+                            <div className="collapsible-body">
+                                <div className="row">
+                                    <div className="col s6">
+                                        <span>
+                                            <strong>ID: </strong>{produto.id} <br />
+                                            <strong>Nome: </strong>{produto.nome} <br />
+                                            <strong>Categoria: </strong>{produto.categoria} <br />
+                                            <strong>Preço: R$</strong>{produto.preco} <br />
+                                            <strong>Custo: R$</strong>{produto.custo} <br />
+                                        </span>
+                                    </div>
+                                    <div className="col s6">
+                                        <button className={estiloBotao} onClick={() => console.log(`Botão dentro do collapsible`)}>
+                                            Editar
+                                            <i className="material-icons right">create</i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i><strong>Produto 3</strong></div>
-                        <div className="collapsible-body">
-                            <div className="row">
-                                <div className="col s6">
-                                    <span>
-                                        <strong>ID: </strong>3 <br />
-                                        <strong>Nome: </strong>Produto4 <br />
-                                        <strong>Categoria: </strong>Teste <br />
-                                        <strong>Preço: R$</strong>50,00 <br />
-                                        <strong>Custo: R$</strong>20,00 <br />
-                                    </span>
-                                </div>
-                                <div className="col s6">
-                                    <button className={estiloBotao} onClick={() => console.log(`Botão dentro do collapsible`)}>Editar
-                                        <i className="material-icons right">create</i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i><strong>Produto 4</strong></div>
-                        <div className="collapsible-body">
-                            <div className="row">
-                                <div className="col s6">
-                                    <span>
-                                        <strong>ID: </strong>4 <br />
-                                        <strong>Nome: </strong>Produto4 <br />
-                                        <strong>Categoria: </strong>Teste <br />
-                                        <strong>Preço: R$ </strong>30,00 <br />
-                                        <strong>Custo: R$ </strong>10,00 <br />
-                                    </span>
-                                </div>
-                                <div className="col s6">
-                                    <button className={estiloBotao} onClick={() => console.log(`Botão dentro do collapsible`)}>Editar
-                                        <i className="material-icons right">create</i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="collapsible-header"><i className="material-icons">crop_7_5</i><strong>Produto 5</strong></div>
-                        <div className="collapsible-body">
-                            <div className="row">
-                                <div className="col s6">
-                                    <span>
-                                        <strong>ID: </strong>5 <br />
-                                        <strong>Nome: </strong>Produto5 <br />
-                                        <strong>Categoria: </strong>Teste <br />
-                                        <strong>Preço: R$</strong>20,00 <br />
-                                        <strong>Custo: R$</strong>5,00 <br />
-                                    </span>
-                                </div>
-                                <div className="col s6">
-                                    <button className={estiloBotao} onClick={() => console.log(`Botão dentro do collapsible`)}>Editar
-                                        <i className="material-icons right">create</i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    ))}
                 </ul>
                 <div>
-                <button className="btn-floating btn-large waves-effect waves-light cyan darken-1" onClick={(e) => this.props.seletorView('Cadastrar Produto', e)}>
-                    <i className="material-icons right mt-8">person_add</i>
-                </button>
+                    <button className="btn-floating btn-large waves-effect waves-light cyan darken-1" onClick={(e) => seletorView('Cadastrar Produto', e)}>
+                        <i className="material-icons right mt-8">person_add</i>
+                    </button>
                 </div>
-
             </div>
         </>
-        );
-    }
+    );
 }
+
+export default ListaProdutos;
