@@ -1,7 +1,6 @@
 import { Component } from "react";
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css';
-
 type props = {
     tema: string
     seletorView: (tela:string, evento?: React.MouseEvent) => void
@@ -19,6 +18,9 @@ export default class FormularioCadastroProduto extends Component<props> {
         let estiloBotao = `btn waves-effect waves-light ${this.props.tema}`
         return (
             <div className="row">
+                <div className="center">
+                    <h3>Cadastro de Clientes</h3>
+                </div>
                 <form className="col s12">
                     <div className="row">
                         <div className="input-field col s6">
@@ -41,17 +43,14 @@ export default class FormularioCadastroProduto extends Component<props> {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col s12">
-                            <button className={estiloBotao} type="submit" name="action">Cadastrar
+                        <div className="center col s12">
+                            <button className="btn waves-effect waves-light cyan darken-1 mr-8" type="submit" name="action">Cadastrar
                                 <i className="material-icons right">person_add</i>
                             </button>                            
-                        </div>
-                        <div className="col s12">
-                            <button className={estiloBotao} type="button" onClick={(e) => this.props.seletorView('Produtos', e)}>Voltar
-                                <i className="material-icons right">person_add</i>
+                            <button className="btn waves-effect waves-light cyan darken-1 ml-8" type="button" onClick={(e) => this.props.seletorView('Produtos', e)}>Voltar
+                                <i className="material-icons right">arrow_back</i>
                             </button>
-                        </div>
-
+                            </div>
                     </div>
                 </form>
             </div>

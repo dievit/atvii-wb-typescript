@@ -45,7 +45,7 @@ export default class Roteador extends Component<{}, state> {
                 {this.state.tela === 'Cadastrar Cliente' && <FormularioCadastroCliente tema="cyan darken-1" seletorView={this.selecionarView} />}
                 {this.state.tela === 'Produtos' && <ListaProdutos tema="cyan darken-1" seletorView={this.selecionarView} />}
                 {this.state.tela === 'Cadastrar Produto' && <FormularioCadastroProduto tema="cyan darken-1" seletorView={this.selecionarView} />}
-                {this.state.tela === 'Terminal de Vendas' && <TerminalDeVendas tema="cyan darken-1" />}
+                {this.state.tela === 'Terminal de Vendas' && <TerminalDeVendas tema="cyan darken-1" seletorView={this.selecionarView} />}
             </>
         );
     }

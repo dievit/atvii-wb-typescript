@@ -2,7 +2,6 @@ import { Component } from "react";
 import 'materialize-css/dist/css/materialize.min.css'
 import M from 'materialize-css';
 
-
 type props = {
     tema: string
     seletorView: (tela:string, evento?: React.MouseEvent) => void
@@ -23,6 +22,9 @@ export default class ListaProdutos extends Component<props> {
         return (
         <>    
             <div>
+                <div className="center">
+                    <h3>Produtos</h3>
+                </div>
                 <ul className="collapsible">
                     <li>
                         <div className="collapsible-header"><i className="material-icons">crop_7_5</i><strong>Produto 1</strong></div>

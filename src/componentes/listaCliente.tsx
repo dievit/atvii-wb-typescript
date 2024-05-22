@@ -2,7 +2,6 @@
 import React, { Component } from "react";
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css';
-import '../styles/custom-style.css'
 
 type props = {
     tema: string
@@ -22,6 +21,9 @@ export default class ListaCliente extends Component<props> {
         let estiloBotao2 = `  ${this.props.tema}`
         return (
             <div>
+                <div className="center">
+                    <h3>Clientes</h3>
+                </div>
                 <ul className='collapsible'>
                     <li>
                         <div className="collapsible-header"><i className="material-icons">person</i>Cliente 1</div>

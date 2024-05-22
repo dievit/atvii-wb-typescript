@@ -19,6 +19,9 @@ export default class FormularioCadastroCliente extends Component<props> {
         let estiloBotao = `btn waves-effect waves-light ${this.props.tema}`
         return (
             <div className="row">
+                <div className="center">
+                    <h3>Cadastro de Clientes</h3>
+                </div>
                 <form className="col s12">
                     <div className="row">
                         <div className="input-field col s6">
@@ -61,12 +64,12 @@ export default class FormularioCadastroCliente extends Component<props> {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col s12">
+                        <div className="center col s12">
                             <button className="btn waves-effect waves-light cyan darken-1" type="submit" name="action">Cadastrar
                                 <i className="material-icons right">person_add</i>
                             </button>
                             <button className="btn waves-effect waves-light cyan darken-1" type="button" onClick={(e) => this.props.seletorView('Clientes', e)}>Voltar
-                                <i className="material-icons right">person_add</i>
+                                <i className="material-icons right">arrow_back</i>
                             </button>
                         </div>
                     </div>
